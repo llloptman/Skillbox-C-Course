@@ -1,0 +1,6 @@
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\bin\Debug\HeloWorldConsoleApp.exe.config
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\bin\Debug\HeloWorldConsoleApp.exe
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\bin\Debug\HeloWorldConsoleApp.pdb
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\obj\Debug\HeloWorldConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\obj\Debug\HeloWorldConsoleApp.exe
+C:\Users\21s3t\Desktop\skillbox c#\first project\HeloWorldConsoleApp\HeloWorldConsoleApp\obj\Debug\HeloWorldConsoleApp.pdb
