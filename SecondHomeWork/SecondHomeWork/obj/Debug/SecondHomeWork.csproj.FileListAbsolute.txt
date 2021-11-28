@@ -1,0 +1,7 @@
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\obj\Debug\SecondHomeWork.csprojAssemblyReference.cache
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\obj\Debug\SecondHomeWork.csproj.CoreCompileInputs.cache
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\bin\Debug\SecondHomeWork.exe.config
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\bin\Debug\SecondHomeWork.exe
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\bin\Debug\SecondHomeWork.pdb
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\obj\Debug\SecondHomeWork.exe
+C:\Users\21s3t\Desktop\skillbox c#\secondProject\SecondHomeWork\SecondHomeWork\obj\Debug\SecondHomeWork.pdb
