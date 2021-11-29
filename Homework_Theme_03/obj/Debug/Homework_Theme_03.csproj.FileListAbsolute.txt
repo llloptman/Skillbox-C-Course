@@ -1,0 +1,7 @@
+S:\skillbox c#\Homework_Theme_03\bin\Debug\Homework_Theme_03.exe.config
+S:\skillbox c#\Homework_Theme_03\bin\Debug\Homework_Theme_03.exe
+S:\skillbox c#\Homework_Theme_03\bin\Debug\Homework_Theme_03.pdb
+S:\skillbox c#\Homework_Theme_03\obj\Debug\Homework_Theme_03.csprojAssemblyReference.cache
+S:\skillbox c#\Homework_Theme_03\obj\Debug\Homework_Theme_03.csproj.CoreCompileInputs.cache
+S:\skillbox c#\Homework_Theme_03\obj\Debug\Homework_Theme_03.exe
+S:\skillbox c#\Homework_Theme_03\obj\Debug\Homework_Theme_03.pdb
