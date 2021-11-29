@@ -1,0 +1,14 @@
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.exe.config
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.pdb
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.csprojAssemblyReference.cache
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.csproj.CoreCompileInputs.cache
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.pdb
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.exe.config
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.exe
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\bin\Debug\thirdTask.pdb
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.csprojAssemblyReference.cache
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.csproj.CoreCompileInputs.cache
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.exe
+S:\skillbox c#\thirdProject\thirdTask\thirdTask\obj\Debug\thirdTask.pdb

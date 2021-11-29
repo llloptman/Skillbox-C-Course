@@ -1,0 +1,14 @@
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.exe.config
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.pdb
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.csproj.CoreCompileInputs.cache
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.pdb
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.csprojAssemblyReference.cache
+S:\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.exe.config
+S:\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.exe
+S:\skillbox c#\thirdProject\secondTask\secondTask\bin\Debug\secondTask.pdb
+S:\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.csprojAssemblyReference.cache
+S:\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.csproj.CoreCompileInputs.cache
+S:\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.exe
+S:\skillbox c#\thirdProject\secondTask\secondTask\obj\Debug\secondTask.pdb

@@ -1,0 +1,7 @@
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\bin\Debug\firstTask.exe.config
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\bin\Debug\firstTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\bin\Debug\firstTask.pdb
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\obj\Debug\firstTask.csprojAssemblyReference.cache
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\obj\Debug\firstTask.csproj.CoreCompileInputs.cache
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\obj\Debug\firstTask.exe
+C:\Users\21s3t\Desktop\skillbox c#\thirdProject\firstTask\firstTask\obj\Debug\firstTask.pdb
