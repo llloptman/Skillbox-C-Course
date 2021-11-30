@@ -75,7 +75,6 @@ namespace Homework_Theme_03
             int gameNumberMin = 12;
             int gameNumberMax = 120;
             int numberOfPlayers = 2;
-            string[] playerNames = new string[numberOfPlayers+1];
             string stop = "stop";
             int gameNumber;
             Random random = new Random();
@@ -90,12 +89,14 @@ namespace Homework_Theme_03
             //Приветствие
             
             Settings();
+            string[] playerNames = new string[numberOfPlayers + 1];
             Console.WriteLine(greatingsText, numberOfPlayers, userTryMin, userTryMax);
             InsertPlayerNames();
 
 
-            
-            while (Console.ReadLine() != stop)
+
+            for (; ; )
+                
             {
                gameNumber = random.Next(gameNumberMin, gameNumberMax + 1);//загадываем число
 
@@ -109,6 +110,11 @@ namespace Homework_Theme_03
                 }
                 Console.WriteLine("Реванш?\n" +
                     "для отмены напишите stop");
+
+                if (Console.ReadLine().ToLower().Equals(stop))
+                {
+                    break;
+                }
             }
 
 
