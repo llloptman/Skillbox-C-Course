@@ -75,67 +75,50 @@ namespace Homework_Theme_03
             int gameNumberMin = 12;
             int gameNumberMax = 120;
             int numberOfPlayers = 2;
+            string[] playerNames = new string[numberOfPlayers+1];
+            string stop = "stop";
+            int gameNumber;
             Random random = new Random();
             
-            //Приветствие
-            string greatingsText = "Приветствую вас в игре!\n" +
-                "                               Это игра для двоих, \n" +
-                "Я загадаю число, а вы по очереди будете отнимать от него числа в диапазоне {0}-{1}\n " +
+           
+            string greatingsText = "                             Приветствую вас в игре!\n" +
+                "                               Это игра для {0}, \n" +
+                "Я загадаю число, а вы по очереди будете отнимать от него числа в диапазоне {1}-{2}\n " +
                 "                                удачи вам!";
 
-            Console.WriteLine("Хотите настроить игру? (yes or no)");
-            string settings = Console.ReadLine();
-            if (settings.ToLower().Contains("yes"))
+
+            //Приветствие
+            
+            Settings();
+            Console.WriteLine(greatingsText, numberOfPlayers, userTryMin, userTryMax);
+            InsertPlayerNames();
+
+
+            
+            while (Console.ReadLine() != stop)
             {
-                Console.WriteLine("Задайте количество игроков 1 или 2");
-                numberOfPlayers = int.Parse(Console.ReadLine());
+               gameNumber = random.Next(gameNumberMin, gameNumberMax + 1);//загадываем число
 
-                Console.WriteLine("Задайте диапазон значений для вычитания");
-                Console.WriteLine("Введите минимальное число");
-                userTryMin = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите максимальное число");
-                userTryMax = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Задайте диапазон в котором я могу загадать число");
-                Console.WriteLine("Введите минимальное число");
-                gameNumberMin = int.Parse(Console.ReadLine());
-                Console.WriteLine("Введите максимальное число");
-                gameNumberMax = int.Parse(Console.ReadLine());
-            }
-
-            int gameNumber = random.Next(gameNumberMin, gameNumberMax + 1);//загадываем число
-
-            if (numberOfPlayers == 1)
-            {
-                foreverAlone();
-            }
-            else
-            {
-                gameFor2Players();
-            }
-
-
-
-            string centeredString(string s, int width)
-            {
-                if (s.Length >= width)
+                if (numberOfPlayers == 1)
                 {
-                    return s;
+                    ForeverAlone();
                 }
-
-                int leftPadding = (width - s.Length) / 2;
-                int rightPadding = width - s.Length - leftPadding;
-
-                return new string(' ', leftPadding) + s + new string(' ', rightPadding);
+                else
+                {
+                    GameFor2PlusPlayers();
+                }
+                Console.WriteLine("Реванш?\n" +
+                    "для отмены напишите stop");
             }
-            void gameFor2Players()
+
+
+
+           
+            void GameFor2PlusPlayers()
             {
-                //При старте, игрокам предлагается ввести свои никнеймы.
-                Console.WriteLine(centeredString(greatingsText, 500), userTryMin, userTryMax);
-                Console.WriteLine("Игрок 1 введите ваше имя и нажмите Enter");
-                string p1Name = Console.ReadLine();
-                Console.WriteLine("Игрок 2 введите ваше имя и нажмите Enter");
-                string p2Name = Console.ReadLine();
+                
+                int pId = 0;
+                
 
                 while (gameNumber > 0)
                 {
@@ -144,7 +127,7 @@ namespace Homework_Theme_03
                     if (gameNumber != 0)
                     {
                         Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {p1Name}");
+                        Console.WriteLine($"Ход : {playerNames[pId]}");
                         userTry = int.Parse(Console.ReadLine());
 
                         if (userTry >= userTryMin && userTry <= userTryMax)
@@ -152,70 +135,40 @@ namespace Homework_Theme_03
                             gameNumber -= userTry;
                             if (gameNumber == 0)
                             {
-                                Console.WriteLine($"Игрок : {p1Name} - Победил");
-                            }
-                        }
-                        else
-                        {
-                            while (!(userTry >= userTryMin && userTry <= userTryMax))
-                            {
-                                Console.WriteLine("Введи число из диапозона {0}-{1}", userTryMin, userTryMax);
-                                userTry = int.Parse(Console.ReadLine());
-                            }
-                            gameNumber -= userTry;
-                            if (gameNumber == 0)
-                            {
-                                Console.WriteLine($"Игрок : {p1Name} - Победил");
+                                Console.WriteLine($"Игрок : {playerNames[pId]} - Победил");
+                                break;
                             }
                         }
                     }
-
-
-                    if (gameNumber != 0)
+                    if (pId < numberOfPlayers -1)
                     {
-                        Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {p2Name}");
-                        userTry = int.Parse(Console.ReadLine());
-
-                        if (userTry >= userTryMin && userTry <= userTryMax)
-                        {
-                            gameNumber -= userTry;
-                            if (gameNumber == 0)
-                            {
-                                Console.WriteLine($"Игрок : {p2Name} - Победил");
-                            }
-                        }
-                        else
-                        {
-                            while (!(userTry >= userTryMin && userTry <= userTryMax))
-                            {
-                                Console.WriteLine("Введи число из диапозона {0}-{1}", userTryMin, userTryMax);
-                                userTry = int.Parse(Console.ReadLine());
-                            }
-                            gameNumber -= userTry;
-                            if (gameNumber == 0)
-                            {
-                                Console.WriteLine($"Игрок : {p2Name} - Победил");
-                            }
-                        }
-
+                        pId++;
                     }
+                    else pId = 0;
                 }
-                Console.ReadKey();
             }
-            void foreverAlone()
+            void InsertPlayerNames()
             {
-                Console.WriteLine(centeredString(greatingsText, 500), userTryMin, userTryMax);
-                Console.WriteLine("Как тебя зовут одинокий волк? нажмите Enter");
-                string p1Name = Console.ReadLine();
-                string p2Name = "I'm your Dady!";
+                if (numberOfPlayers == 1)
+                {
+                    playerNames[1] = "I'm your Dady!";
+                }
+                for (int i = 0; i < numberOfPlayers; i++)
+                {
+                    Console.WriteLine($"Игрок {i + 1} введите ваше имя и нажмите Enter");
+                    playerNames[i] = Console.ReadLine();
+                }
+            }
+            void ForeverAlone()
+            {
+                playerNames[1] = "I'm your Dady!";
 
                 while (gameNumber > 0)
                 {
                     if (gameNumber != 0)
                     {
                         Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {p1Name}");
+                        Console.WriteLine($"Ход : {playerNames[0]}");
                         userTry = int.Parse(Console.ReadLine());
 
                         if (userTry >= userTryMin && userTry <= userTryMax)
@@ -223,34 +176,22 @@ namespace Homework_Theme_03
                             gameNumber -= userTry;
                             if (gameNumber == 0)
                             {
-                                Console.WriteLine($"Игрок : {p1Name} - Победил");
+                                Console.WriteLine($"Игрок : {playerNames[0]} - Победил");
+                                break;
                             }
                         }
-                        else
-                        {
-                            while (!(userTry >= userTryMin && userTry <= userTryMax))
-                            {
-                                Console.WriteLine("Введи число из диапозона {0}-{1}", userTryMin, userTryMax);
-                                userTry = int.Parse(Console.ReadLine());
-                            }
-                            gameNumber -= userTry;
-                            if (gameNumber == 0)
-                            {
-                                Console.WriteLine($"Игрок : {p1Name} - Победил");
-                            }
-                        }
-
                     }
                     if (gameNumber != 0)
                     {
                         Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {p2Name}");
+                        Console.WriteLine($"Ход : {playerNames[1]}");
                         if (gameNumber >= userTryMin && gameNumber <= userTryMax)
                         {
                             userTry = gameNumber;
                             gameNumber -= userTry;
                             Console.WriteLine(userTry);
                         }
+
                         else
                         {
                             userTry = random.Next(userTryMin, userTryMax + 1);
@@ -259,13 +200,36 @@ namespace Homework_Theme_03
                         }
                         if (gameNumber == 0)
                         {
-                            Console.WriteLine($"Игрок : {p2Name} - Победил");
+                            Console.WriteLine($"Игрок : {playerNames[1]} - Победил");
                         }
                     }
                 }
-                Console.ReadKey();
             }
+                        
+            void Settings()
+            {
+                Console.WriteLine("Хотите настроить игру? (yes or no)");
+                string settings = Console.ReadLine();
+                if (settings.ToLower().Contains("yes"))
+                {
+                    Console.WriteLine("Задайте количество игроков 1 или больше");
+                    numberOfPlayers = int.Parse(Console.ReadLine());
 
+                    Console.WriteLine("Задайте диапазон значений для вычитания");
+                    Console.WriteLine("Введите минимальное число");
+                    userTryMin = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите максимальное число");
+                    userTryMax = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Задайте диапазон в котором я могу загадать число");
+                    Console.WriteLine("Введите минимальное число");
+                    gameNumberMin = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите максимальное число");
+                    gameNumberMax = int.Parse(Console.ReadLine());
+                }
+            }
         }
+
+        
     }
 }
