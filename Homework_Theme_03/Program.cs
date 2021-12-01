@@ -77,6 +77,8 @@ namespace Homework_Theme_03
             int numberOfPlayers = 2;
             string stop = "stop";
             int gameNumber;
+            bool soloGame = false;
+            bool pcTurn = false;
             Random random = new Random();
             
            
@@ -100,14 +102,9 @@ namespace Homework_Theme_03
             {
                gameNumber = random.Next(gameNumberMin, gameNumberMax + 1);//загадываем число
 
-                if (numberOfPlayers == 1)
-                {
-                    ForeverAlone();
-                }
-                else
-                {
+               
                     GameFor2PlusPlayers();
-                }
+                
                 Console.WriteLine("Реванш?\n" +
                     "для отмены напишите stop");
 
@@ -122,7 +119,11 @@ namespace Homework_Theme_03
            
             void GameFor2PlusPlayers()
             {
-                
+
+                if (soloGame == true)
+                {
+                    numberOfPlayers = 2;
+                }
                 int pId = 0;
                 
 
@@ -134,6 +135,24 @@ namespace Homework_Theme_03
                     {
                         Console.WriteLine($"Загаданное число: {gameNumber}");
                         Console.WriteLine($"Ход : {playerNames[pId]}");
+                        if (gameNumber >= userTryMin && gameNumber <= userTryMax && pcTurn == true)
+                        {
+                            userTry = gameNumber;
+                            gameNumber -= userTry;
+                            Console.WriteLine(userTry);
+                        }
+                        else if (pcTurn == true)
+                        {
+                            userTry = random.Next(userTryMin, userTryMax + 1);
+                            gameNumber -= userTry;
+                            Console.WriteLine(userTry);
+                            pcTurn = false;
+                            pId = 0;
+                            continue;
+                        }
+
+
+
                         userTry = int.Parse(Console.ReadLine());
 
                         if (userTry >= userTryMin && userTry <= userTryMax)
@@ -145,10 +164,23 @@ namespace Homework_Theme_03
                                 break;
                             }
                         }
+                        else
+                        {
+
+                            Console.WriteLine($"введите число в интервале {userTryMin} - {userTryMax}");
+                            continue;
+                        }
+                           
+                            
                     }
-                    if (pId < numberOfPlayers -1)
+                    if (pId < numberOfPlayers -1 && pcTurn == false)
                     {
                         pId++;
+                        if (soloGame == true && pcTurn == false)
+                        {
+                            pcTurn = true;
+                        }
+                        
                     }
                     else pId = 0;
                 }
@@ -158,57 +190,12 @@ namespace Homework_Theme_03
                 if (numberOfPlayers == 1)
                 {
                     playerNames[1] = "I'm your Dady!";
+                    soloGame = true;
                 }
                 for (int i = 0; i < numberOfPlayers; i++)
                 {
                     Console.WriteLine($"Игрок {i + 1} введите ваше имя и нажмите Enter");
                     playerNames[i] = Console.ReadLine();
-                }
-            }
-            void ForeverAlone()
-            {
-                playerNames[1] = "I'm your Dady!";
-
-                while (gameNumber > 0)
-                {
-                    if (gameNumber != 0)
-                    {
-                        Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {playerNames[0]}");
-                        userTry = int.Parse(Console.ReadLine());
-
-                        if (userTry >= userTryMin && userTry <= userTryMax)
-                        {
-                            gameNumber -= userTry;
-                            if (gameNumber == 0)
-                            {
-                                Console.WriteLine($"Игрок : {playerNames[0]} - Победил");
-                                break;
-                            }
-                        }
-                    }
-                    if (gameNumber != 0)
-                    {
-                        Console.WriteLine($"Загаданное число: {gameNumber}");
-                        Console.WriteLine($"Ход : {playerNames[1]}");
-                        if (gameNumber >= userTryMin && gameNumber <= userTryMax)
-                        {
-                            userTry = gameNumber;
-                            gameNumber -= userTry;
-                            Console.WriteLine(userTry);
-                        }
-
-                        else
-                        {
-                            userTry = random.Next(userTryMin, userTryMax + 1);
-                            gameNumber -= userTry;
-                            Console.WriteLine(userTry);
-                        }
-                        if (gameNumber == 0)
-                        {
-                            Console.WriteLine($"Игрок : {playerNames[1]} - Победил");
-                        }
-                    }
                 }
             }
                         
