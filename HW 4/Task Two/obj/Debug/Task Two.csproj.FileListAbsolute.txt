@@ -1,0 +1,6 @@
+S:\git\Skillbox-C-Course\HW 4\Task Two\bin\Debug\Task Two.exe.config
+S:\git\Skillbox-C-Course\HW 4\Task Two\bin\Debug\Task Two.exe
+S:\git\Skillbox-C-Course\HW 4\Task Two\bin\Debug\Task Two.pdb
+S:\git\Skillbox-C-Course\HW 4\Task Two\obj\Debug\Task Two.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW 4\Task Two\obj\Debug\Task Two.exe
+S:\git\Skillbox-C-Course\HW 4\Task Two\obj\Debug\Task Two.pdb
