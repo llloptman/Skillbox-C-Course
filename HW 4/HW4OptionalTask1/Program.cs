@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW4Optional_First_task
+namespace HW4OptionalTask1
 {
     class Program
     {

@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW 4\Task Three\bin\Debug\Task Three.exe.config
+S:\git\Skillbox-C-Course\HW 4\Task Three\bin\Debug\Task Three.exe
+S:\git\Skillbox-C-Course\HW 4\Task Three\bin\Debug\Task Three.pdb
+S:\git\Skillbox-C-Course\HW 4\Task Three\obj\Debug\Task Three.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW 4\Task Three\obj\Debug\Task Three.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW 4\Task Three\obj\Debug\Task Three.exe
+S:\git\Skillbox-C-Course\HW 4\Task Three\obj\Debug\Task Three.pdb

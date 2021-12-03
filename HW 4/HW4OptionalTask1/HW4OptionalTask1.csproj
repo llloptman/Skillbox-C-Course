@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7085B3F4-D114-4CD6-A588-9F85D29C34C2}</ProjectGuid>
+    <ProjectGuid>{1BC4E73C-FA87-4D42-89FC-F308D1F0EED1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HW4Optional_First_task</RootNamespace>
-    <AssemblyName>HW4Optional_First task</AssemblyName>
+    <RootNamespace>HW4OptionalTask1</RootNamespace>
+    <AssemblyName>HW4OptionalTask1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

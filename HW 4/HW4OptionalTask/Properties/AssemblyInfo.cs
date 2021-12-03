@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HW4Optional_First task")]
+[assembly: AssemblyTitle("HW4OptionalTask")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HW4Optional_First task")]
+[assembly: AssemblyProduct("HW4OptionalTask")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7085b3f4-d114-4cd6-a588-9f85d29c34c2")]
+[assembly: Guid("18d3b28e-71a0-4003-ab78-3cf0b1e6745c")]
 
 // Version information for an assembly consists of the following four values:
 //

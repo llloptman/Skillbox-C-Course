@@ -1,7 +1,0 @@
-S:\git\Skillbox-C-Course\HW 4\Task One\bin\Debug\Task One.exe.config
-S:\git\Skillbox-C-Course\HW 4\Task One\bin\Debug\Task One.exe
-S:\git\Skillbox-C-Course\HW 4\Task One\bin\Debug\Task One.pdb
-S:\git\Skillbox-C-Course\HW 4\Task One\obj\Debug\Task One.csprojAssemblyReference.cache
-S:\git\Skillbox-C-Course\HW 4\Task One\obj\Debug\Task One.csproj.CoreCompileInputs.cache
-S:\git\Skillbox-C-Course\HW 4\Task One\obj\Debug\Task One.exe
-S:\git\Skillbox-C-Course\HW 4\Task One\obj\Debug\Task One.pdb
