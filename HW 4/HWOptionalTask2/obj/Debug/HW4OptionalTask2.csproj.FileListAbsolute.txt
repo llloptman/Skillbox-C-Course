@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\bin\Debug\HWOptionalTask2.exe.config
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\bin\Debug\HWOptionalTask2.exe
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\bin\Debug\HWOptionalTask2.pdb
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\obj\Debug\HW4OptionalTask2.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\obj\Debug\HW4OptionalTask2.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\obj\Debug\HWOptionalTask2.exe
+S:\git\Skillbox-C-Course\HW 4\HWOptionalTask2\obj\Debug\HWOptionalTask2.pdb
