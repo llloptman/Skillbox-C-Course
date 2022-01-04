@@ -59,8 +59,9 @@ namespace HW4OptionalTask1
             ShowTableHeader();// Показываем шапку таблицы
             DefaultTableInitialization();
             ShowTable();
-            ShowMonthsWithLessProfit();
+            //ShowMonthsWithLessProfit();
             CountOfMonthsWithPositiveProfit();
+            ShowMonthsWithLessProfit_V2();
             Console.ReadKey();
 
 
@@ -200,6 +201,34 @@ namespace HW4OptionalTask1
                     }
                 }
                 Console.WriteLine($"Месяцев с положительной прибылью: {count}");
+            }
+            void ShowMonthsWithLessProfit_V2()
+            {
+               // profit = new int[]{ 2,2,2,2,2,2,2,2,2,2,2,2};
+               //profit = new int[]{ 1,2,-1,0,1,2,-1,0,-1,0,-2,0};
+                int countOfMonths = 0;
+                Array.Sort(profit, months);
+                for (int i = 0; i < profit.Length - 1; i++)
+                {
+                    if (i != profit.Length)
+                    {
+                        if (countOfMonths < 3)
+                        {
+                            Console.Write($"Profit = {profit[i]}, month {months[i]} ->");
+                        }
+                        if (profit[i] < profit[i + 1])
+                        {
+                            countOfMonths++;
+                        }
+                    }
+                }
+                if (profit[profit.Length-2] == profit[profit.Length-1] && countOfMonths <= 3)
+                        {
+                            Console.Write($"Profit = {profit[profit.Length-1]}, month {months[profit.Length-1]} ->");
+                        }
+                   
+                
+                Console.WriteLine();
             }
         }
 
