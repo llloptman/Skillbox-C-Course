@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\bin\Debug\employee_notebook.exe.config
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\bin\Debug\employee_notebook.exe
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\bin\Debug\employee_notebook.pdb
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\obj\Debug\employee_notebook.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\obj\Debug\employee_notebook.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\obj\Debug\employee_notebook.exe
+S:\git\Skillbox-C-Course\HW6\employee_notebook\employee_notebook\obj\Debug\employee_notebook.pdb
