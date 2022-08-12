@@ -12,11 +12,8 @@ namespace Task1_Devide_String
         {
            string longSentence = Console.ReadLine();
 
-            ShowWords(DevideWordsBySpace(longSentence));
-            Console.ReadKey();
-
-
-
+           ShowWords(DevideWordsBySpace(longSentence));
+           Console.ReadKey();
         }
         static string [] DevideWordsBySpace (string longSentence)
         {
