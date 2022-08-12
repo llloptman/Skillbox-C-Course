@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\bin\Debug\Task1 Devide String.exe.config
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\bin\Debug\Task1 Devide String.exe
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\bin\Debug\Task1 Devide String.pdb
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\obj\Debug\Task1 Devide String.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\obj\Debug\Task1 Devide String.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\obj\Debug\Task1 Devide String.exe
+S:\git\Skillbox-C-Course\HW5\Task1 Devide String\Task1 Devide String\obj\Debug\Task1 Devide String.pdb
