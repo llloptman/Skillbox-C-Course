@@ -17,17 +17,15 @@ namespace employee_notebook
 
         static void WriteToFile(string fileName)
         {
+            int id = GetId(fileName);
 
                 using (StreamWriter sw = File.AppendText(fileName))
                 {
 
                     string note = string.Empty;
-                    Console.WriteLine("\n Введите id сотрудника");
-                    note += $"{Console.ReadLine(),3}#";
+                    note += $"{id,3}#";
                     string now = DateTime.Now.ToString();
-                    Console.WriteLine($"\n Подтвердите дату и время создания записи {now}");
                     note += $"{now,20}#";
-                    Console.ReadKey();
                     Console.WriteLine("\n Введите ФИО сотрудника");
                     note += $"{Console.ReadLine(),15}#";
                     Console.WriteLine("\n Введите возраст сотрудника");
@@ -73,6 +71,7 @@ namespace employee_notebook
         {
             Console.Write($"{"id",3}{"date",20}{"FIO ",20}{"Age ",5}{"Hieght ", 5}{"birth day ", 20}{"Birth Place ",15}\n");
         }
+
         static void Menu(string fileName)
         {
             Console.WriteLine("Если хотите просмотреть записи - введите 1\n" +
@@ -84,6 +83,31 @@ namespace employee_notebook
             if (choice == "2")
                 WriteToFile(fileName);
             else Menu(fileName);
+        }
+        public static int GetId (string fileName){
+
+            int id = 0;
+                if (!File.Exists(fileName))
+            {
+                using (FileStream fileStream = new FileStream(fileName, FileMode.Create))
+                {
+
+                }
+                return id;
+            }
+             using (StreamReader sr = new StreamReader(fileName))
+                {
+                 string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] data = line.Split('#');
+                     id = Convert.ToInt32(data[0].Trim());
+
+                    Console.Write($"{data[0],3}{data[1],20}{data[2],20}{data[3],5}{data[4],5}{data[5],20}{data[6],15}\n");
+                }
+                sr.Close();
+             }
+             return id + 1;
         }
     }
 }
