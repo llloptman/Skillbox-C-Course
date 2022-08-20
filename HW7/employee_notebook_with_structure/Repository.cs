@@ -22,7 +22,6 @@ namespace employee_notebook_with_structure
         public void SetFileName(string fileName) {
             this.fileName = fileName;
         }
-
         public void AddWorker()
         {
             Worker worker = new Worker(GenerateID());
@@ -66,11 +65,47 @@ namespace employee_notebook_with_structure
             }
             return this.workers = workers;
         }
+        public Worker GetWorkerById(string id)
+        {
+            if (!File.Exists(fileName))
+            {
+                using (FileStream fileStream = new FileStream(fileName, FileMode.Create))
+                {
+
+                }
+            }
+           List <Worker> workers = new List<Worker>();
+                Worker worker = new Worker();
+            using (StreamReader sr = new StreamReader(fileName))
+            {
+                string line;
+                int count = 0;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] data = line.Split('#');
+                    worker = new Worker(Convert.ToInt32(data[0]), Convert.ToDateTime(data[1]), data[2], data[3],
+                       data[4], Convert.ToDateTime(data[5]), data[6]);
+
+                    if (Convert.ToInt32(worker.Id) == Convert.ToInt32(id))
+                    {
+                        Console.WriteLine($"{worker.Id,3} {worker.DateOfNote,20} {worker.FIO,15}" +
+                                            $" {worker.Age,5} {worker.Hieght,5} {worker.DateOfBirth.ToShortDateString(),20} {worker.PlaceOfBirth,15}");
+                        count++;
+                    }
+
+                }
+                    if (count == 0)
+                    {
+                    Console.WriteLine("Запись не найдена");
+                    }
+                sr.Close();
+            }
+            return worker;
+        }
         static void MakeHeader()
         {
             Console.Write($"{"id",3}{"date",20}{"FIO ",20}{"Age ",5}{"Hieght ",5}{"birth day ",20}{"Birth Place ",15}\n");
         }
-
         private int GenerateID()
         {
             if (GetAllWorkers().Count!=0)
@@ -80,7 +115,6 @@ namespace employee_notebook_with_structure
             }
             return 0;
         }
-
         public void ShowNotesInConsole()
         {
             MakeHeader();

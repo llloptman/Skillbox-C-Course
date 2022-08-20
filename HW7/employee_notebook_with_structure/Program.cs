@@ -24,7 +24,23 @@ namespace employee_notebook_with_structure
             string choice = Console.ReadLine();
 
             if (choice == "1")
-                repository.ShowNotesInConsole();
+            {
+                Console.WriteLine("Если хотите посмотреть все записи - введите 1");
+                Console.WriteLine("Если хотите посмотреть запись по id - введите 2");
+                choice = Console.ReadLine();
+                if (choice == "1")
+                {
+                    repository.ShowNotesInConsole();
+                    Menu(repository);
+                }
+                else if (choice == "2")
+                {
+                    Console.WriteLine("Введите id записи");
+                    string id = Console.ReadLine();
+                    repository.GetWorkerById(id);
+                    Menu(repository);
+                }
+            }
             if (choice == "2")
                 repository.AddWorker();
             if (choice == "3")
