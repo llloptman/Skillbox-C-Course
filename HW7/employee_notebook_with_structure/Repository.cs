@@ -11,15 +11,16 @@ namespace employee_notebook_with_structure
     {
         List<Worker> workers;
         string fileName;
-    
+
+        public string FileName { get => fileName; set => fileName = value; }
 
         public Repository()
         {
             workers = new List<Worker>();
             fileName = "default note.txt";
         }
-        public string SetFileName() {
-           return fileName = "Emloees Note.txt";
+        public void SetFileName(string fileName) {
+            this.fileName = fileName;
         }
 
         public void AddWorker()
@@ -85,10 +86,9 @@ namespace employee_notebook_with_structure
             MakeHeader();
             foreach (var item in GetAllWorkers())
             {
-                Console.WriteLine($"{item.Id} {item.DateOfNote} {item.FIO}" +
-                    $" {item.Age} {item.Hieght} {item.DateOfBirth.ToShortDateString()} {item.PlaceOfBirth}");
+                Console.WriteLine($"{item.Id,3} {item.DateOfNote,20} {item.FIO,15}" +
+                    $" {item.Age,5} {item.Hieght,5} {item.DateOfBirth.ToShortDateString(),20} {item.PlaceOfBirth,15}");
             }
-            Console.ReadKey();
         }
 
 
