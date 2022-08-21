@@ -37,12 +37,27 @@ namespace employee_notebook_with_structure
                 {
                     Console.WriteLine("Введите id записи");
                     string id = Console.ReadLine();
-                    repository.GetWorkerById(id);
+                    
+                    if (repository.GetWorkerById(id).Id != -1)
+                    {
+                    repository.ShowWorker(repository.GetWorkerById(id));
+
+                    Console.WriteLine("Удалить? (Y/N)");
+                    string delete = Console.ReadLine();
+                    if (delete.ToLower().Equals("y"))
+                    {
+                        repository.DeleteById(id);
+                        repository.ShowNotesInConsole();
+                        Menu(repository);
+                    }
+                    }
+                    else Console.WriteLine("Запись не найдена");
+
                     Menu(repository);
                 }
             }
             if (choice == "2")
-                repository.AddWorker();
+                repository.AddWorker(new Worker(repository.GenerateID()));
             if (choice == "3")
             {
                 Console.WriteLine("Введите название нового файла");

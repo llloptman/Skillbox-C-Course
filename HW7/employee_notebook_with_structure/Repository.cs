@@ -20,11 +20,10 @@ namespace employee_notebook_with_structure
             fileName = "default note.txt";
         }
         public void SetFileName(string fileName) {
-            this.fileName = fileName;
+            this.fileName = fileName+".txt";
         }
-        public void AddWorker()
+        public void AddWorker(Worker worker)
         {
-            Worker worker = new Worker(GenerateID());
             using (StreamWriter sw = File.AppendText(fileName))
             {
 
@@ -67,46 +66,42 @@ namespace employee_notebook_with_structure
         }
         public Worker GetWorkerById(string id)
         {
-            if (!File.Exists(fileName))
+            GetAllWorkers();
+            int count=0;
+            foreach (var item in workers)
             {
-                using (FileStream fileStream = new FileStream(fileName, FileMode.Create))
+                if (item.Id.Equals(Convert.ToInt32(id)))
                 {
 
+                count++;
+                return item;
+
                 }
-            }
-           List <Worker> workers = new List<Worker>();
-                Worker worker = new Worker();
-            using (StreamReader sr = new StreamReader(fileName))
-            {
-                string line;
-                int count = 0;
-                while ((line = sr.ReadLine()) != null)
+                else if (count >0)
                 {
-                    string[] data = line.Split('#');
-                    worker = new Worker(Convert.ToInt32(data[0]), Convert.ToDateTime(data[1]), data[2], data[3],
-                       data[4], Convert.ToDateTime(data[5]), data[6]);
-
-                    if (Convert.ToInt32(worker.Id) == Convert.ToInt32(id))
-                    {
-                        Console.WriteLine($"{worker.Id,3} {worker.DateOfNote,20} {worker.FIO,15}" +
-                                            $" {worker.Age,5} {worker.Hieght,5} {worker.DateOfBirth.ToShortDateString(),20} {worker.PlaceOfBirth,15}");
-                        count++;
-                    }
-
+                Console.WriteLine("Запись не найдена");
                 }
-                    if (count == 0)
-                    {
-                    Console.WriteLine("Запись не найдена");
-                    }
-                sr.Close();
+
             }
-            return worker;
+            return new Worker(-1,new DateTime(),null,null,null,new DateTime(),null);
+        }
+        public void DeleteById(string id)
+        {
+            List<Worker> workers = GetAllWorkers();
+            Worker workerForDelete = GetWorkerById(id);
+            File.Delete(fileName);
+            workers.Remove(workerForDelete);
+            foreach (var item in workers)
+            {
+                AddWorker(item);
+            }
+
         }
         static void MakeHeader()
         {
             Console.Write($"{"id",3}{"date",20}{"FIO ",20}{"Age ",5}{"Hieght ",5}{"birth day ",20}{"Birth Place ",15}\n");
         }
-        private int GenerateID()
+        public int GenerateID()
         {
             if (GetAllWorkers().Count!=0)
             {
@@ -123,6 +118,11 @@ namespace employee_notebook_with_structure
                 Console.WriteLine($"{item.Id,3} {item.DateOfNote,20} {item.FIO,15}" +
                     $" {item.Age,5} {item.Hieght,5} {item.DateOfBirth.ToShortDateString(),20} {item.PlaceOfBirth,15}");
             }
+        }
+        public void ShowWorker(Worker item)
+        {
+            Console.WriteLine($"{item.Id,3} {item.DateOfNote,20} {item.FIO,15}" +
+                    $" {item.Age,5} {item.Hieght,5} {item.DateOfBirth.ToShortDateString(),20} {item.PlaceOfBirth,15}");
         }
 
 
