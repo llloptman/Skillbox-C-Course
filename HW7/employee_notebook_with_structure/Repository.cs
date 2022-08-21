@@ -85,6 +85,23 @@ namespace employee_notebook_with_structure
             }
             return new Worker(-1,new DateTime(),null,null,null,new DateTime(),null);
         }
+        public List<Worker> GetWorkersInRange(DateTime from, DateTime to)
+        {
+            List<Worker> matchedWorkers = new List<Worker>();
+            GetAllWorkers();
+            foreach (var item in workers)
+            {
+                if (item.DateOfNote >= from && item.DateOfNote <= to)
+                {
+                    matchedWorkers.Add(item);
+                }
+            }
+            if (matchedWorkers.Count == 0)
+            {
+                Console.WriteLine("Записи не найдены");
+            }
+            return matchedWorkers;
+        }
         public void DeleteById(string id)
         {
             List<Worker> workers = GetAllWorkers();
@@ -110,10 +127,10 @@ namespace employee_notebook_with_structure
             }
             return 0;
         }
-        public void ShowNotesInConsole()
+        public void ShowNotesInConsole(IList<Worker> workers)
         {
             MakeHeader();
-            foreach (var item in GetAllWorkers())
+            foreach (var item in workers)
             {
                 Console.WriteLine($"{item.Id,3} {item.DateOfNote,20} {item.FIO,15}" +
                     $" {item.Age,5} {item.Hieght,5} {item.DateOfBirth.ToShortDateString(),20} {item.PlaceOfBirth,15}");

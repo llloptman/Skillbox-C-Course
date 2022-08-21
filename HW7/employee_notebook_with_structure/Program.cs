@@ -27,10 +27,11 @@ namespace employee_notebook_with_structure
             {
                 Console.WriteLine("Если хотите посмотреть все записи - введите 1");
                 Console.WriteLine("Если хотите посмотреть запись по id - введите 2");
+                Console.WriteLine("Если хотите посмотреть записи созданные в определенное время - введите 3");
                 choice = Console.ReadLine();
                 if (choice == "1")
                 {
-                    repository.ShowNotesInConsole();
+                    repository.ShowNotesInConsole(repository.GetAllWorkers());
                     Menu(repository);
                 }
                 else if (choice == "2")
@@ -47,12 +48,21 @@ namespace employee_notebook_with_structure
                     if (delete.ToLower().Equals("y"))
                     {
                         repository.DeleteById(id);
-                        repository.ShowNotesInConsole();
+                        repository.ShowNotesInConsole(repository.GetAllWorkers());
                         Menu(repository);
                     }
                     }
                     else Console.WriteLine("Запись не найдена");
 
+                    Menu(repository);
+                }
+                else if (choice == "3")
+                {
+                    Console.WriteLine("Введите дату с которой начать поиск в формате дд мм гггг");
+                    DateTime from =Convert.ToDateTime(Console.ReadLine());
+                    Console.WriteLine("Введите дату до которой начать поиск в формате дд мм гггг");
+                    DateTime to =Convert.ToDateTime(Console.ReadLine());
+                    repository.ShowNotesInConsole(repository.GetWorkersInRange(from, to));
                     Menu(repository);
                 }
             }
