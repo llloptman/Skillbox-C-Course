@@ -13,6 +13,7 @@ namespace employee_notebook_with_structure
         string fileName;
 
         public string FileName { get => fileName; set => fileName = value; }
+        public List<Worker> Workers { get => workers; set => workers = value; }
 
         public Repository()
         {

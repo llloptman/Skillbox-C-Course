@@ -11,7 +11,12 @@ namespace employee_notebook_with_structure
         static void Main(string[] args)
         {
             Repository rep1 = new Repository();
-            Menu(rep1);
+            rep1.GetAllWorkers();
+            rep1.ShowNotesInConsole(rep1.Workers);
+            rep1.Workers.OrderBy(w => w.PlaceOfBirth);
+            rep1.ShowNotesInConsole(rep1.Workers);
+            Console.ReadKey();
+            //Menu(rep1);
 
 
 
@@ -28,6 +33,7 @@ namespace employee_notebook_with_structure
                 Console.WriteLine("Если хотите посмотреть все записи - введите 1");
                 Console.WriteLine("Если хотите посмотреть запись по id - введите 2");
                 Console.WriteLine("Если хотите посмотреть записи созданные в определенное время - введите 3");
+                Console.WriteLine("Если хотите отфильтровать записи - введите 4");
                 choice = Console.ReadLine();
                 if (choice == "1")
                 {
@@ -64,6 +70,36 @@ namespace employee_notebook_with_structure
                     DateTime to =Convert.ToDateTime(Console.ReadLine());
                     repository.ShowNotesInConsole(repository.GetWorkersInRange(from, to));
                     Menu(repository);
+                }
+                else if (choice == "4")
+                {
+                    Console.WriteLine("Если хотите фильтровать по имени - введите 1");
+                    Console.WriteLine("Если хотите фильтровать по дате создания - введите 2");
+                    Console.WriteLine("Если хотите фильтровать по возрасту - введите 3");
+                    choice = Console.ReadLine();
+                    if (choice == "1")
+                    {
+                        repository.GetAllWorkers();
+                        repository.Workers.OrderBy(w => w.FIO);
+                        repository.ShowNotesInConsole(repository.Workers);
+                        Menu(repository);
+
+                    }
+                    if (choice == "2")
+                    {
+                        repository.GetAllWorkers();
+                        repository.Workers.OrderBy(w => w.DateOfNote);
+                        repository.ShowNotesInConsole(repository.Workers);
+                        Menu(repository);
+
+                    }if (choice == "3")
+                    {
+                        repository.GetAllWorkers();
+                        repository.Workers.OrderBy(w => w.Age);
+                        repository.ShowNotesInConsole(repository.Workers);
+                        Menu(repository);
+
+                    }
                 }
             }
             if (choice == "2")
