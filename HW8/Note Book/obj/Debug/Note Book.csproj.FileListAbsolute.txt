@@ -5,3 +5,10 @@ S:\git\Skillbox-C-Course\HW8\HW8\Note Book\obj\Debug\Note Book.csprojAssemblyRef
 S:\git\Skillbox-C-Course\HW8\HW8\Note Book\obj\Debug\Note Book.csproj.CoreCompileInputs.cache
 S:\git\Skillbox-C-Course\HW8\HW8\Note Book\obj\Debug\Note Book.exe
 S:\git\Skillbox-C-Course\HW8\HW8\Note Book\obj\Debug\Note Book.pdb
+S:\git\Skillbox-C-Course\HW8\Note Book\obj\Debug\Note Book.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW8\Note Book\obj\Debug\Note Book.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW8\Note Book\obj\Debug\Note Book.exe
+S:\git\Skillbox-C-Course\HW8\Note Book\obj\Debug\Note Book.pdb
+S:\git\Skillbox-C-Course\HW8\Note Book\bin\Debug\Note Book.exe.config
+S:\git\Skillbox-C-Course\HW8\Note Book\bin\Debug\Note Book.exe
+S:\git\Skillbox-C-Course\HW8\Note Book\bin\Debug\Note Book.pdb
