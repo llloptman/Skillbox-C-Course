@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW8\Work_with_list\bin\Debug\Work_with_list.exe.config
+S:\git\Skillbox-C-Course\HW8\Work_with_list\bin\Debug\Work_with_list.exe
+S:\git\Skillbox-C-Course\HW8\Work_with_list\bin\Debug\Work_with_list.pdb
+S:\git\Skillbox-C-Course\HW8\Work_with_list\obj\Debug\Work_with_list.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW8\Work_with_list\obj\Debug\Work_with_list.exe
+S:\git\Skillbox-C-Course\HW8\Work_with_list\obj\Debug\Work_with_list.pdb
+S:\git\Skillbox-C-Course\HW8\Work_with_list\obj\Debug\Work_with_list.csprojAssemblyReference.cache

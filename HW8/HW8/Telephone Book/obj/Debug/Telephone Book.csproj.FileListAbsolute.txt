@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\bin\Debug\Telephone Book.exe.config
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\bin\Debug\Telephone Book.exe
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\bin\Debug\Telephone Book.pdb
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\obj\Debug\Telephone Book.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\obj\Debug\Telephone Book.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\obj\Debug\Telephone Book.exe
+S:\git\Skillbox-C-Course\HW8\HW8\Telephone Book\obj\Debug\Telephone Book.pdb
