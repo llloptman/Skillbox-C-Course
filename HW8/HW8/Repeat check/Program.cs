@@ -17,8 +17,6 @@ namespace Repeat_check
         {
             Console.WriteLine("Введите число");
             string number = Console.ReadLine();
-            //HashSet<string> set2 = new HashSet<string>();
-            //set2.Add(number);
             if (set.Contains(number))
             {
                 Console.WriteLine($"число уже {number} вводилось");
