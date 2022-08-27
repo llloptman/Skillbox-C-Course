@@ -1,0 +1,7 @@
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\bin\Debug\Repeat check.exe.config
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\bin\Debug\Repeat check.exe
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\bin\Debug\Repeat check.pdb
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\obj\Debug\Repeat check.csprojAssemblyReference.cache
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\obj\Debug\Repeat check.csproj.CoreCompileInputs.cache
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\obj\Debug\Repeat check.exe
+S:\git\Skillbox-C-Course\HW8\HW8\Repeat check\obj\Debug\Repeat check.pdb
