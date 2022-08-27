@@ -35,23 +35,12 @@ namespace Work_with_list
             Console.WriteLine();
             Console.ReadKey();
         }
-        public static void DeleteNubersInRange (List<int> list, int min, int max)
-        {
-            foreach (var item in list.Reverse<int>())
-            {
-
-                if (item >= min && item <= max)
-                {
-                    list.Remove(item);
-                }
-            }
-        }
         public static void DeleteNubersInRange (List<int> list)
         {
             foreach (var item in list.Reverse<int>())
             {
 
-                if (item >= 25 && item <= 50)
+                if (item > 25 && item < 50)
                 {
                     list.Remove(item);
                 }
